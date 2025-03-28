@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
 * {
-    font-family: ;
+    font-family: "Teachers";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    padding: 25px 50px;
+    background-color: black;
+}
+
+.nav-links {
+    display: flex;
+    gap: 45px;
+    margin-left: auto;
+    padding-right: 125px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding-top: 7px;
+    font-size: 18px;
+}
+
+.btn-sign-in {
+    padding: 3px 7px;
+    font-size: 15px;
+    background: transparent;
+    color: white;
+    border: 5px groove rgb(212, 212, 212);
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10%;
+}
+
+.nav-links .btn-sign-in:hover {
+
 }
