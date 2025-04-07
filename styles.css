@@ -105,6 +105,22 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.icon-close {
+    color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(174, 173, 173);
+    width: 10%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    z-index: 1;
 }
 
 .divider {
@@ -157,7 +173,7 @@ h2,
 
 .input-box .icon {
     position: absolute;
-    left: 95%;
+    right: 5px;
     font-size: 0.8em;
     color: rgb(255, 255, 255);
     line-height: 30px;
