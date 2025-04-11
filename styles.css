@@ -64,8 +64,8 @@ header {
     transform: scaleX(1);
     transform-origin: left;
 }
-
-.btn-sign-in {
+/* next time use .wrapper as the form-box base to use less code */
+.btn-login {
     padding: 3px 7px;
     background: transparent;
     color: white;
@@ -78,13 +78,40 @@ header {
     /* Smooth transition */
 }
 
-.btn-sign-in:hover {
+.btn-sign-up {
+    padding: 3px 7px;
+    background: transparent;
+    color: white;
+    border: 5px groove rgb(212, 212, 212);
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10%;
+    transition: background 0.6s ease, color 0.6s ease;
+    /* Smooth transition */
+}
+
+.btn-login:hover {
     background: rgb(212, 212, 212);
     color: black;
 }
 
-.btn-sign-in:active {
+.btn-sign-up:hover {
+    background: rgb(212, 212, 212);
+    color: black;
+}
+
+.btn-login:active {
     background: rgba(212, 212, 212, 0.7);
+}
+
+.btn-sign-up:active {
+    background: rgba(212, 212, 212, 0.7);
+}
+
+.form-box-login h2 {
+    position: fixed;
+    top: 0;
 }
 
 .form-box-sign-up h2 {
@@ -105,7 +132,23 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+
+.form-box-login {
+    width: 400px;
+    height: 270px;
+    border: 2px solid rgb(30, 30, 30);
+    background: transparent;
+    position: absolute;
+    top: 300px;
+    border-radius: 25px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden; */
 }
 
 .icon-close {
@@ -141,7 +184,7 @@ h2,
 }
 
 .remember-forgot,
-.login {
+.sign-up {
     padding: 7px;
     color: white;
 }
@@ -204,6 +247,23 @@ h2,
 .remember-forgot a:hover {
     text-decoration: underline;
     color: rgb(212, 212, 212);
+}
+
+.form-box-login button {
+    width: 100%;
+    background: rgb(42, 42, 42);
+    color: rgb(255, 255, 255);
+    padding: 4px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.6s ease, color 0.6s ease;
+    border: 0 solid;
+}
+
+.form-box-login button:focus {
+    background: rgb(142, 142, 142);
+    color: rgb(40, 39, 39);
 }
 
 .form-box-sign-up button {
