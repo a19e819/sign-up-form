@@ -18,5 +18,6 @@ signupLink.addEventListener('click', () => {
 
 loginLink.addEventListener('click', () => {
     signup.classList.remove('active');
+    login.classList.remove('active');
 });
 
