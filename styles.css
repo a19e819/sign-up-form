@@ -116,23 +116,29 @@ header {
 
 .form-box-sign-up h2 {
     position: fixed;
-    top: 0;
+    top: 10px;
 }
 
 .form-box-sign-up {
     width: 400px;
     height: 270px;
-    border: 2px solid rgb(30, 30, 30);
     background: transparent;
     position: relative;
     top: 70px;
+    right: 0;
     border-radius: 25px;
-    backdrop-filter: blur(2px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgb(30, 30, 30);
+    border-radius: 25px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+    background: transparent;
     /* overflow: hidden; */
+    opacity: 0;
+    transform: translateX(400px);
+    transition: height .2s ease;
 }
 
 .form-box-login {
@@ -142,6 +148,7 @@ header {
     background: transparent;
     position: absolute;
     top: 300px;
+    left: 550px;
     border-radius: 25px;
     backdrop-filter: blur(2px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
@@ -184,7 +191,7 @@ h2,
 }
 
 .remember-forgot,
-.sign-up {
+.sign-up, .login {
     padding: 7px;
     color: white;
 }
@@ -283,6 +290,25 @@ h2,
     color: rgb(40, 39, 39);
 }
 
+.sign-up {
+    padding: 10px 5px;
+    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-up p a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sign-up p a:hover {
+    text-decoration: underline;
+    color: rgb(212, 212, 212);
+}
+
+
 .login {
     padding: 10px 5px;
     font-size: .9em;
@@ -301,3 +327,19 @@ h2,
     color: rgb(212, 212, 212);
 }
 
+.form-box-sign-up.active {
+    height: 350px;
+    padding-top: 30px;
+    transform: translateX(-16px);
+    transition: height 0.8s ease, opacity 2s ease;
+    opacity: 1;
+}
+
+.form-box-login.active {
+    transform: translateX(-1000px);
+}
+
+.form-box-login,
+.form-box-sign-up {
+  transition: transform 0.6s ease; /* ⏱ Slower transition */
+}
