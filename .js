@@ -11,7 +11,7 @@ const signup = document.querySelector('.form-box-sign-up');
 const loginLink = document.querySelector('.login');
 const signupLink = document.querySelector('.sign-up');
 const btnPopUp = document.querySelector('.btn-login');
-const close = document.querySelector('.icon-close');
+const iconClose = document.querySelector('.icon-close');
 
 signupLink.addEventListener('click', () => {
     signup.classList.add('active');
@@ -27,4 +27,8 @@ loginLink.addEventListener('click', () => {
 
 btnPopUp.addEventListener('click', () => {
     login.classList.add('active-popup');
+});
+
+iconClose.addEventListener('click', () => {
+    login.classList.remove('active-popup');
 });
