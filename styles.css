@@ -156,6 +156,7 @@ header {
     justify-content: center;
     align-items: center;
     /* overflow: hidden; */
+    transform: scale(0);
 }
 
 .icon-close {
@@ -171,6 +172,10 @@ header {
     align-items: center;
     border-radius: 10px;
     z-index: 1;
+}
+
+.icon-close:hover {
+    cursor: pointer;
 }
 
 .divider {
@@ -342,4 +347,8 @@ h2,
 .form-box-login,
 .form-box-sign-up {
   transition: transform 0.6s ease; /* ⏱ Slower transition */
+}
+
+.form-box-login.active-popup {
+    transform: scale(1);
 }
