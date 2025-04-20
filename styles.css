@@ -352,3 +352,26 @@ h2,
 .form-box-login.active-popup {
     transform: scale(1);
 }
+
+#background {
+    filter: brightness(1);
+    border-radius: 50%;
+    position: absolute;
+    height: 220px;
+    left: 17%;
+    bottom: 9%;
+    animation: animateBck 5s ease-in-out infinite;
+}
+
+@keyframes animateBck {
+    0% {
+        filter: brightness(1) invert(1) hue-rotate(0deg); /* Starting position */
+      }
+      50% {
+        filter: brightness(1) invert(1) hue-rotate(180deg); /* Halfway rotation */
+      }
+      100% {
+        filter: brightness(1) invert(1) hue-rotate(360deg); /* Full rotation */
+      }
+}
+
