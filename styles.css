@@ -64,6 +64,7 @@ header {
     transform: scaleX(1);
     transform-origin: left;
 }
+
 /* next time use .wrapper as the form-box base to use less code */
 .btn-login {
     padding: 3px 7px;
@@ -196,7 +197,8 @@ h2,
 }
 
 .remember-forgot,
-.sign-up, .login {
+.sign-up,
+.login {
     padding: 7px;
     color: white;
 }
@@ -346,22 +348,23 @@ h2,
 
 .form-box-login,
 .form-box-sign-up {
-  transition: transform 0.6s ease; /* ⏱ Slower transition */
+    transition: transform 0.6s ease;
+    /* ⏱ Slower transition */
 }
 
 .form-box-login.active-popup {
     transform: scale(1);
 }
 
-#no-background {
-    mix-blend-mode: multiply;
-    background-color: white; 
-    filter: brightness(1);
-    position: absolute;
-    height: 100px;
-    left: 15%;
-    top: 25%;
-        transform: scaleY(0);
-    transition: transform .5s;
+.linear-gradient-1 {
+    width: 500px;
+    height: 50px;
+    background: linear-gradient(70deg, rgb(0, 0, 0) 10%, rgb(4, 25, 255) 50%, rgb(38, 16, 136) 80%, black 100%);
+    animation: linearGradient 5s ease-in-out infinite;
 }
 
+@keyframes linearGradient {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
